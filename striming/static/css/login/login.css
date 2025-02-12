@@ -61,7 +61,7 @@
 .login__background {
   position: absolute;
   top: 0;
-  block-size: 100%;
+  inline-size: 100%;
   filter: blur(0.2rem) sepia(20%);
 }
 
