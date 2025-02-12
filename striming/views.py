@@ -6,4 +6,4 @@ from django.contrib.auth.decorators import login_required
  
 @login_required 
 def dashboard(request): 
-  return render( request, 'striming/dashboard.html', {'section': 'dashboard'}) #Последнее это секция,  о ней ниже
+  return render( request, './striming/dashboard.html') #Последнее это секция,  о ней ниже

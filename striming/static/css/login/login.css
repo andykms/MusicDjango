@@ -67,7 +67,7 @@
 
 .login__block input {
   block-size: 35px;
-  inline-size: var(--login-input-inline-size);
+  width: var(--login-input-inline-size);
   border-radius: 15px;
   background-color: var(--login-input-background);
   color: var(--login-input-font-color);
@@ -83,22 +83,21 @@
   border-radius: 30px;
   font-size: var(--login-info-font-size);
   background-color: var(--login-submit-background);
-  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.6s ease-in-out;
 }
 
 .login__block-submit input {
   inline-size: 100%;
   border: none;
-  background-color: var(--login-submit-background);
+  background-color: inherit;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
 }
 
 .login__block-submit:hover {
-  box-shadow: 0 5px 2px var(--login-submit-background);
+  background-color: rgb(97, 0, 0);
 }
 
-.login__block-submit input:hover {
+.login__block-submit:hover input {
   color: var(--login-font-color);
 }
 

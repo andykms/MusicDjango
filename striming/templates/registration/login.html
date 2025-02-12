@@ -15,7 +15,6 @@
                 <form action="{% url 'login' %}" method="post" class="login__user-password">
                   {{ form.as_p }}
                   {% csrf_token %}
-                  <input type="hidden" name="next" value="{ { next } }" />
                 <p class="login__block-submit"><input class="login__input-submit" type="submit" value="Войти"></p>
                 </form>
           </div>
