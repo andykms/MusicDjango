@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,13 +32,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'striming', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'striming',
 ]
 
 MIDDLEWARE = [
@@ -103,14 +104,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_TZ = True
+LANGUAGE_CODE = 'ru-ru'  # Устанавливаем русский язык
+TIME_ZONE = 'Europe/Moscow'  # Устанавливаем временную зону
+USE_I18N = True  # Включаем интернационализацию
+USE_L10N = True  # Включаем локализацию
 
 
 # Static files (CSS, JavaScript, Images)
@@ -122,3 +119,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'striming.User'
+
+# Указываем путь к папке для медиафайлов
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Указываем URL для доступа к медиафайлам
+MEDIA_URL = '/media/'
+LOGIN_REDIRECT_URL = 'dashboard' 
+LOGIN_URL = 'login' 
+LOGOUT_URL = 'logout'

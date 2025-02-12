@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Intro';
+  src: local('Intro'), url('../fonts/intro.woff2') format('woff2'), url('../fonts/intro.woff') format('woff'), url('../fonts/intro.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MCTIME';
+  src: url(../fonts/MCTIME.TTF) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Variable';
+  font-display: swap;
+  src: local('Inter-Variable'), url('../fonts/Inter-Variable.woff2') format('woff2'), url('../fonts/Inter-Variable.woff2') format('woff2-variations');
+  font-weight: 400 800;
+}

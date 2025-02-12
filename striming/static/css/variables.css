@@ -1,0 +1,21 @@
+:root {
+  --big-font-family: 'Inter-Variable';
+  --strict-font-family: 'MCTIME';
+  --login-font-color: white;
+  --login-input-background: white;
+  --login-input-font-color: black;
+  --login-submit-background: brown;
+  --login-error-font-color: red;
+  --login-block-size: 400px;
+  --login-inline-size: 600px;
+  --login-header-font-size: 60px;
+  --login-info-font-size: 24px;
+  --login-input-inline-size: 100%;
+}
+@media(width <= 675px) {
+  :root{
+    --login-inline-size: 100%;
+    --login-header-font-size: 30px;
+    --login-info-font-size: 14px;
+  }
+}

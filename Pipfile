@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+pillow = "*"
+django-htmlmin = "*"
+django-compressor = "*"
+csscompressor = "*"
 
 [dev-packages]
 

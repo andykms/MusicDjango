@@ -1,0 +1,112 @@
+@import url('../variables.css');
+@import url('../fonts.css');
+@import url('../globals.css');
+
+.login {
+  font-family: var(--big-font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: black;
+  block-size: 100vh;
+  z-index: 0;
+}
+
+.section__form {
+  color: var(--login-font-color);
+  z-index: 5;
+  display: flex;
+  background: black;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px; 
+  min-block-size: var(--login-block-size);
+  inline-size:  var(--login-inline-size);
+}
+
+.login__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.login__block_info {
+  opacity: 1;
+  display: block;
+}
+
+.login__block_header {
+  font-size: var(--login-header-font-size);
+  text-align: center;
+}
+
+.login__user-password {
+  font-size: var(--login-info-font-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.login__user-password p {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__background {
+  position: absolute;
+  top: 0;
+  block-size: 100%;
+  filter: blur(0.2rem) sepia(20%);
+}
+
+.login__block input {
+  block-size: 35px;
+  inline-size: var(--login-input-inline-size);
+  border-radius: 15px;
+  background-color: var(--login-input-background);
+  color: var(--login-input-font-color);
+}
+
+.login__block-submit {
+  align-self: center;
+  inline-size: 75%;
+  block-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-size: var(--login-info-font-size);
+  background-color: var(--login-submit-background);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.login__block-submit input {
+  inline-size: 100%;
+  border: none;
+  background-color: var(--login-submit-background);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.login__block-submit:hover {
+  box-shadow: 0 5px 2px var(--login-submit-background);
+}
+
+.login__block-submit input:hover {
+  color: var(--login-font-color);
+}
+
+.login__block-info_error {
+  font-size: 14px;
+  color: var(--login-error-font-color);
+}
+
+.errorlist {
+  color: var(--login-error-font-color);
+}
