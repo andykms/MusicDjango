@@ -12,11 +12,17 @@
           <div class = "form login__block" >
             <h1 class = "login__block_info login__block_header">Войдите в аккаунт</h1>
               <p class = "login__block_info login__block_description">Пожалуйста, введите данные вашего аккаунта</p>
-                <form action="{% url 'login' %}" method="post" class="login__user-password">
+              <p class = "login__block_info login__block_description">Если еще не имеете аккаунта, <a class = "login__link login__link_light" href="{% url "register" %}">зарегистрируйтесь</a></p>
+                <form action="{% url 'login' %}" method="post" class="login__user-password login__form">
                   {{ form.as_p }}
                   {% csrf_token %}
                 <p class="login__block-submit"><input class="login__input-submit" type="submit" value="Войти"></p>
                 </form>
+                <p class = "login__block_info">
+                  <a href="{% url "password_reset" %}" class = "login__link login__link_dark">
+                    Забыли пароль?
+                    </a>                    
+                </p>
           </div>
         {% endblock %}
       </section>

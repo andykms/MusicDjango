@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static './css/login/login.css' %}">
+  </head>
+  <body>
+    <main class="main login">
+      <img class = "login__background">
+      <section class = "section section__form">
+        {% block content %}
+          <div class = "form login__block" >
+            <h1 class = "login__block_info login__block_header">Добро пожаловать {{ new_user.first_name}}!</h1>
+              <p class = "login__block_info login__block_description">Аккаунт успешно создан, приятного прослушивания</p>
+                <form action="{% url 'login'%}" class="login__user-password login__form">
+                <p class="login__block-submit"><input class="login__input-submit" type="submit" value="На главную"></p>
+                </form>
+          </div>
+        {% endblock %}
+      </section>
+    </main>
+  </body>
+  <script src="{% static './js/login/login.js' %}"></script>
+</html>
