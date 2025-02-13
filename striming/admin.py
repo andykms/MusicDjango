@@ -39,11 +39,6 @@ class PlaylistAdmin(admin.ModelAdmin):
     def get_tracks(self, obj):
         return ", ".join([track.title for track in obj.tracks.all()])
     get_tracks.short_description = 'Треки'
-# Регистрация модели User (если вы используете кастомную модель пользователя)
-@admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'is_staff')
-    search_fields = ('username', 'email')
 
 admin.site.register(Genre)
 """list_display: Поля, которые будут отображаться в списке объектов.

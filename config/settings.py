@@ -119,7 +119,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'striming.User'
+AUTH_USER_MODEL = 'auth.User'
 
 # Указываем путь к папке для медиафайлов
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
